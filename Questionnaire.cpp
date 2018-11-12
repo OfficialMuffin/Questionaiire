@@ -19,12 +19,16 @@ int main()
     string name;
     int age;
     User u1;
+    bool running = true;
 
+
+    while(running) {
     /** Welcome Message w/ User's Name */
     cout << "What is your name?: " << endl;
     cin >> name;
     u1.setName(name);
     cout << "Welcome, " << u1.getName() << "!" << endl;
+    returnToAge:
     Sleep(1000);
 	cout << u1.getName() << ", to continue, you have to be over 18." << endl;
 	Sleep(1000);
@@ -46,16 +50,14 @@ int main()
 
         }
         else if(age < 18) {
-            cout << "You are underage!" << endl;
+            cout << "You are underage! Please try again!" << endl;
             Sleep(1500);
-            cout << "Program Ending..."
+            goto returnToAge;
         }
         else {
             cout << "INVALID INPUT!" << endl;
-            return 0;
+            goto returnToAge;
         }
-
-
-
+    }
 
 }
