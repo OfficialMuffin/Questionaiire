@@ -32,10 +32,23 @@ int main()
 	cin >> age;
 
         if (age >= 18) {
-            cout << "You may continue" << endl;
+            cout << "You may continue..." << endl;
+            Sleep(1000);
+            //Enter rest of questionnaire here
+
+
+
+
+
+
+
+
+
         }
         else if(age < 18) {
             cout << "You are underage!" << endl;
+            Sleep(1500);
+            cout << "Program Ending..."
         }
         else {
             cout << "INVALID INPUT!" << endl;
